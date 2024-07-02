@@ -1,0 +1,9 @@
+comandos usados
+para crear una nueva clase 
+ng g class producto --skip-testt
+
+crear un nuevo componente
+ng g c producto-lista
+
+crear un nuevo servicio
+ng g s productoService 
