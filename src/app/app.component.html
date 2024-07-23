@@ -1,2 +1,32 @@
-<app-producto-lista>
-</app-producto-lista>
+<!-- navbar -->
+<div class="">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!--ponemos routerlink q es aca como href poniendole la ruta -->
+            <a class="navbar-brand" routerLink="productos"> <img src="https://via.placeholder.com/30" alt="Logo" class="d-inline-block align-text-top"> Sistema de Inventarios
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" routerLink="productos" routerLinkActive="active">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="agregar-producto" routerLinkActive="active">Agregar
+								Producto</a></li>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<!-- <app-producto-lista>
+    </app-producto-lista> -->
+<div class="container-xl">
+    <!-- va a escuchar las rutas segun sea la que fuera, la respuesta sea a traves de la configuracion de rutas -->
+    <router-outlet></router-outlet>
+</div>

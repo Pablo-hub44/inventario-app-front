@@ -13,19 +13,20 @@
             </tr>
         </thead>
         <tbody>
-            <!-- contactos es el objeto q enviamos desde contactoController -->
+
             <!-- asi iteramos en los elemetos del array -->
-            <tr th:each="contacto: ${contactos}">
-                <td>Prueba</td>
-                <td>Prueba</td>
-                <td>Prueba</td>
-                <td>Prueba</td>
-                <td></td>
-                <td class="text-center">
-                    <div class="container">
+            <tr *ngFor="let producto of productos">
+                <td>{{producto.idProducto}}</td>
+                <td>{{producto.descripcion}}</td>
+                <td>{{producto.precio}}</td>
+                <td>{{producto.existencia}}</td>
+                <td>{{producto.marca}}</td>
+                <td class="text-center ">
+                    <div class="container ">
                         <!-- ponemor idcontacto tambien el la ruta con thymeaf -->
-                        <a class="btn btn-warning btn-sm me-3">Editar</a>
-                        <a class="btn btn-danger btn-sm">Eliminar</a>
+                        <button class="btn btn-warning btn-sm me-3 " (click)="editarProducto(producto.idProducto)">Editar</button>
+                        <!--(click) es el evento onclick-->
+                        <button class="btn btn-danger btn-sm " (click)="eliminarProducto(producto.idProducto)">Eliminar</button>
                     </div>
                 </td>
 

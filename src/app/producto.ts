@@ -1,9 +1,9 @@
 export class Producto {
     idProducto!: number;  //! que puede ser indefinido
-    descripiton!: string;
+    descripcion!: string;
     precio!: number;
     existencia!: number;
-
+    marca !: string;
 
 
 }
